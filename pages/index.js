@@ -31,6 +31,7 @@ export default function Home({items}) {
       gridTemplateColumns="repeat(4,1fr)" border="1px solid blue" >
        {items.items.map((e)=>(
       <Box
+      key={e.id}
         role={'group'}
         p={6}
         maxW={'330px'}
