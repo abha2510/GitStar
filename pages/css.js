@@ -22,7 +22,6 @@ const CSS = ({items}) => {
         p={6}
         maxW={'330px'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
         rounded={'lg'}
         border={"1px solid grey"}
@@ -42,7 +41,6 @@ const CSS = ({items}) => {
             pos: 'absolute',
             top: 5,
             left: 0,
-            // backgroundImage: `url(${IMAGE})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
