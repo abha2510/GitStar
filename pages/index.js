@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Link from "next/link";
 
@@ -7,7 +7,6 @@ import Link from "next/link";
 import {
   Box,
   Center,
-  useColorModeValue,
   Heading,
   Text,
   Stack,
@@ -70,6 +69,7 @@ export default function Home({items}) {
             width={250}
             objectFit={'cover'}
              src={e.owner.avatar_url}
+             alt={"all"}
           />
         </Box>
         <Stack pt={10} align={'center'}>

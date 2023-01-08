@@ -1,19 +1,18 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+ import Image from 'next/image'
 
 import {
   Box,
   Center,
-  useColorModeValue,
   Heading,
   Text,
   Stack,
 } from '@chakra-ui/react';
 
-const CSS = ({items}) => {
+const Javascript = ({items}) => {
   return (
     <div>
-      <Center py={10}  display="grid"
+        <Center py={10}  display="grid"
       gridTemplateColumns="repeat(4,1fr)" border="1px solid blue" >
        {items.items.map((e)=>(
       <Box
@@ -56,6 +55,7 @@ const CSS = ({items}) => {
             width={250}
             objectFit={'cover'}
              src={e.owner.avatar_url}
+             alt={"js"}
           />
         </Box>
         <Stack pt={10} align={'center'}>
@@ -82,11 +82,11 @@ const CSS = ({items}) => {
   )
 }
 
-export default CSS
-//https://api.github.com/search/repositories?l=JavaScript&q=rails+language:css
+export default Javascript;
+//https://api.github.com/search/repositories?l=JavaScript&q=rails+language:javascript
 
 export async function getServerSideProps(context){
-  let r = await fetch (`https://api.github.com/search/repositories?q=stars:%3E1+language:css`);
+  let r = await fetch (`https://api.github.com/search/repositories?q=stars:%3E1+language:javascript`);
   let d = await r.json();
   console.log(d)
   return {
@@ -95,3 +95,4 @@ export async function getServerSideProps(context){
    }
   }
 }
+ 

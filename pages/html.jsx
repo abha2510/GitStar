@@ -1,10 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
+ import Image from 'next/image'
 
 import {
   Box,
   Center,
-  useColorModeValue,
   Heading,
   Text,
   Stack,
@@ -56,6 +55,7 @@ const HTML = ({items}) => {
             width={250}
             objectFit={'cover'}
              src={e.owner.avatar_url}
+             alt={"html"}
           />
         </Box>
         <Stack pt={10} align={'center'}>
