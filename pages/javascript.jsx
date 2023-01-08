@@ -85,7 +85,7 @@ const Javascript = ({items}) => {
 export default Javascript;
 //https://api.github.com/search/repositories?l=JavaScript&q=rails+language:javascript
 
-export async function getServerSideProps(context){
+export async function getStaticProps(context){
   let r = await fetch (`https://api.github.com/search/repositories?q=stars:%3E1+language:javascript`);
   let d = await r.json();
   console.log(d)
