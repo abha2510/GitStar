@@ -97,7 +97,7 @@ export default function Home({items}) {
   )
 }
 
-export async function getServerSideProps(context){
+export async function getStaticProps(context){
   let r = await fetch (`https://api.github.com/search/repositories?q=stars:%3E1+language:all`);
   let d = await r.json();
   console.log(d)
